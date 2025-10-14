@@ -32,6 +32,9 @@ public class WebSecurityConfig{
                 .securityContextRepository(securityContextRepository)
                 .authorizeExchange(req -> {
                     req.pathMatchers("/login").permitAll();
+                    // Para swagger
+                    req.pathMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll();
+                    // Cualquier otra peticion debe estar autenticada
                     req.anyExchange().authenticated();
                 })
                 .build();
