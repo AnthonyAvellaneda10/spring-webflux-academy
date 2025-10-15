@@ -24,7 +24,7 @@ import org.springframework.http.HttpHeaders;
         servers = {
                 @Server(
                        description = "DEV SERVER",
-                        url = "http://localhost:8080"
+                        url = "http://localhost:8086"
                 )
         },
         security = @SecurityRequirement(
